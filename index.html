@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visionary Tutoring</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+            color: #333;
+        }
+        header {
+            background-color: #007ACC;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005F99;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #004D80;
+        }
+        section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        .hero {
+            position: relative;
+            background-image: url('studying.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            padding: 100px;
+            text-align: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        .hero h2, .hero p {
+            position: relative;
+            z-index: 1;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+        .service-card {
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: 300px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            .service-card {
+                flex: 1 1 calc(100% - 20px);
+            }
+        }
+        footer {
+            background-color: #005F99;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #007ACC;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #005F99;
+        }
+        h2 {
+            padding: 20px;
+            text-align: center;
+        }
+        p {
+            padding: 5px;
+            text-align: center;
+        }
+        .ti {
+            text-align: center;
+            font-size: large;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .tutors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .tutor-card {
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: 300px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tutor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .tutor-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .tutor-card {
+                flex: 1 1 calc(100% - 20px);
+            }
+        }
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .contact-details {
+            flex: 1 1 300px;
+            max-width: 400px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            flex: 1 1 300px;
+            max-width: 400px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form input, form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        form button {
+            background-color: #007ACC;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #005F99;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="VisionaryLogo.png" style="width:100px;height:120px;">
+        <h3>Top notch tutoring service</h3>
+        <h1 class="ti">Visionary Tutoring</h1>
+        <p>Helping students achieve their goals, one lesson at a time!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#tutors">Tutors</a>
+        <a href="#about">About Us</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h2>Achieve Academic Success</h2>
+        <p>Join our team of dedicated tutors to unlock your potential.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>No matter what your future journey looks like, a strong educational foundation is key to your success. Learning can be challenging for many students, but it is a skill needed to thrive in any walk of life.</p>
+        <div class="services">
+            <div class="service-card">
+                <h3>Math Tutoring</h3>
+                <p>Personalized lessons to help you master algebra, geometry, calculus, and more.</p>
+                <p>K-12</p>
+            </div>
+            <div class="service-card">
+                <h3>Computer Science Tutoring</h3>
+                <p>Understand complex concepts in computer science and programming.</p>
+                <p>K-12</p>
+            </div>
+            <div class="service-card">
+                <h3>Science Tutoring</h3>
+                <p>Explore physics, chemistry, and biology with expert guidance.</p>
+                <p>K-12</p>
+            </div>
+            <div class="service-card">
+                <h3>AP Courses</h3>
+                <p>Prepare for AP exams with our specialized tutoring.</p>
+                <p>High School</p>
+            </div>
+            <div class="service-card">
+                <h3>SAT Prep</h3>
+                <p>Boost your test scores with expert guidance and practice.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or want to get started, feel free to reach out!</p>
+        <div class="contact-container">
+            <div class="contact-details">
+                <p>📞 Phone: (224) 763-1518</p>
+                <p>📧 Email: varsitytutors2025@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tutors">
+        <h2>Meet the Tutors</h2>
+        <p>Our tutors are accomplished, passionate, and ready to help you succeed!</p>
+        <div class="tutors">
+            <div class="tutor-card">
+                <img src="tutor1.jpg" alt="Tutor 1">
+                <h3>Jane Doe</h3>
+                <p>High honor roll student excelling in AP Math and Science. Scored a 1550 on the SAT and loves teaching problem-solving skills.</p>
+            </div>
+            <div class="tutor-card">
+                <img src="tutor2.jpg" alt="Tutor 2">
+                <h3>John Smith</h3>
+                <p>Top 5% of the class with perfect scores in AP Computer Science and Physics. Passionate about coding and helping students learn programming.</p>
+            </div>
+            <div class="tutor-card">
+                <img src="tutor3.jpg" alt="Tutor 3">
+                <h3>Emily Johnson</h3>
+                <p>Excelled in AP English and History with a 4.0 GPA. A skilled communicator who helps students excel in reading, writing, and analysis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p class="ti">At Visionary Tutoring, we provide personalized, high-quality support from exceptional tutors who know what it takes to succeed. Our team includes top-performing students who are on the high honor roll, excel in AP and honors classes, and achieve outstanding SAT scores. We tailor learning plans to meet each student’s unique needs, fostering confidence, curiosity, and success in a supportive environment. With Visionary Tutoring, you’ll be guided by the best to achieve your academic goals.</p>
+        <img src="VisionaryLogo.png" style="width:200px;height:200px;display: block;margin-left: auto;margin-right: auto;">
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Visionary Tutoring Company. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
