@@ -43,46 +43,43 @@
     <section id="services">
         <h2>Services</h2>
         <p>We offer online and in-person</p>
-        <div class="services">
-            <div class="service-card">
-                <h3>Math Tutoring</h3>
-                <p>Personalized lessons to help you master algebra, geometry, calculus, and more.</p>
-                <p>K-12</p>
+        <div class="slider-container">
+            <button class="slider-btn prev">❮</button>
+            <div class="slider-wrapper">
+                <div class="services">
+                    <div class="service-card">
+                        <h3>Math Tutoring</h3>
+                        <p>Personalized lessons to help you master algebra, geometry, calculus, and more.</p>
+                        <p>K-12</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Computer Science Tutoring</h3>
+                        <p>Understand complex concepts in computer science and programming.</p>
+                        <p>K-12</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>English Tutoring</h3>
+                        <p>Improve your reading, writing, and critical thinking skills with personalized English lessons.</p>
+                        <p>K-12</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Science Tutoring</h3>
+                        <p>Explore physics, chemistry, and biology with expert guidance.</p>
+                        <p>K-12</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Accounting Tutoring</h3>
+                        <p>Develop a deep understanding of accounting principles, financial statements, and business analysis.</p>
+                        <p>High School</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>AP Courses</h3>
+                        <p>Prepare for AP exams with our specialized tutoring.</p>
+                        <p>High School</p>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Computer Science Tutoring</h3>
-                <p>Understand complex concepts in computer science and programming.</p>
-                <p>K-12</p>
-            </div>
-            <div class="service-card">
-                <h3>Science Tutoring</h3>
-                <p>Explore physics, chemistry, and biology with expert guidance.</p>
-                <p>K-12</p>
-            </div>
-            <div class="service-card">
-                <h3>English Tutoring</h3>
-                <p>Improve your reading, writing, and critical thinking skills with personalized English lessons.</p>
-                <p>K-12</p>
-            </div>
-            <div class="service-card">
-                <h3>Accounting Tutoring</h3>
-                <p>Develop a deep understanding of accounting principles, financial statements, and business analysis.</p>
-                <p>High School</p>
-            </div>
-            <div class="service-card">
-                <h3>Spanish/French Tutoring</h3>
-                <p>Build fluency in Spanish or French with lessons tailored to your speaking, reading, and writing goals.</p>
-                <p>High School</p>
-            </div>
-            <div class="service-card">
-                <h3>AP Courses</h3>
-                <p>Prepare for AP exams with our specialized tutoring.</p>
-                <p>High School</p>
-            </div>
-            <div class="service-card">
-                <h3>SAT Prep</h3>
-                <p>Boost your test scores with expert guidance and practice.</p>
-            </div>
+            <button class="slider-btn next">❯</button>
         </div>
     </section>
     <section id="contact" class="contact-section">
@@ -109,4 +106,17 @@
         <p> Crystal Vision Tutoring </p>
     </footer>
 </body>
+<script>
+    const slider = document.querySelector('.slider-wrapper');
+    const nextBtn = document.querySelector('.slider-btn.next');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+
+    nextBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+</script>
 </html>
