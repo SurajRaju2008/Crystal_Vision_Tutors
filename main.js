@@ -39,34 +39,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-const contactForm = document.getElementById('contactForm');
-const formSuccess = document.getElementById('formSuccess');
-
-contactForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(contactForm);
-  const data = Object.fromEntries(formData);
-
-  try {
-    const response = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-
-    if (response.ok) {
-      contactForm.reset();
-      formSuccess.classList.add('show');
-      setTimeout(() => formSuccess.classList.remove('show'), 5000);
-    } else {
-      alert('Error sending email. Please try again.');
-    }
-  } catch (error) {
-    console.error(error);
-    alert('Something went wrong.');
-  }
-});
 
 const observerOptions = {
   threshold: 0.1,
