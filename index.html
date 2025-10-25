@@ -1,117 +1,279 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crystal Vision Tutoring</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <head><link rel="stylesheet" href="styles.css">
-    </head>
-</head>
-<body>
-    <header>
-        <img src="VisionaryLogo.png" alt="Crystal Vision Tutoring Logo" style="width:100px;height:120px;">
-        <h3>Top notch tutoring service</h3>
-        <h1>Crystal Vision Tutoring</h1>
-        <p>High-achieving high school tutors, passionate about teaching—helping peers reach their academic goals!</p>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/VisionaryLogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crystal Vision Tutoring - High honor roll students helping younger learners succeed in Schaumburg and Palatine. Personalized tutoring in reading, writing, and math." />
+    <title>Crystal Vision Tutoring | Student-Led Tutoring in Schaumburg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-container">
+          <div class="logo-container">
+            <img src="/VisionaryLogo.png" alt="Crystal Vision Tutoring Logo" class="logo" />
+            <span class="brand-name">Crystal Vision Tutoring</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html" class="nav-link">Home</a></li>
+            <li><a href="/tutors.html" class="nav-link">Tutors</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#contact" class="nav-link nav-link-cta">Get Started</a></li>
+          </ul>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="tutors.html">Tutors</a>
-    </nav>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">See Your Path to Success Clearly</h1>
+          <p class="hero-subtitle">Student-led tutoring from high honor roll high schoolers who understand what it takes to excel</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Schedule a Session</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+          </div>
+          <div class="hero-badge">
+            <span class="badge-icon">📍</span>
+            <span>Serving Schaumburg & Surrounding Areas</span>
+          </div>
+        </div>
+      </section>
 
-    <section id="home" class="hero">
-        <h2 class="autoShow">Achieve Academic Success</h2>
-        <p class="autoShow">Do you want to have an edge in school over other students?</p>
-        <p class="autoShow">Well we help turn C's into A's in just weeks!</p>
-    </section>  
-
-    <section class="why-choose-us">
-        <h2>Why Choose Us?</h2>
-        <ul>
-            <h3>📚 Top-performing high school tutors excelling in AP & Honors courses.</h3>
-            <h3>🎯 Personalized 1-on-1 learning tailored to your child's needs.</h3>
-            <h3>💰 Affordable rates without compromising quality.</h3>
-            <h3>📈 Proven success with improved grades & test scores.</h3>
-            <h3>🕒 Flexible scheduling to fit your busy life.</h3>
-            <br>
-            <a href="#contact" class="cta-button liquid">Book a Session</a> 
-        </ul>
-    </section>
-
-    <section id="services">
-        <h2>Services</h2>
-        <p>We offer online and in-person</p>
-        <div class="slider-container">
-            <button class="slider-btn prev">❮</button>
-            <div class="slider-wrapper">
-                <div class="services">
-                    <div class="service-card">
-                        <h3>Math Tutoring</h3>
-                        <p>Personalized lessons to help you master algebra, geometry, calculus, and more.</p>
-                        <p>K-12</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Computer Science Tutoring</h3>
-                        <p>Understand complex concepts in computer science and programming.</p>
-                        <p>K-12</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>English Tutoring</h3>
-                        <p>Improve your reading, writing, and critical thinking skills with personalized English lessons.</p>
-                        <p>K-12</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Science Tutoring</h3>
-                        <p>Explore physics, chemistry, and biology with expert guidance.</p>
-                        <p>K-12</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>AP Courses</h3>
-                        <p>Prepare for AP exams with our specialized tutoring.</p>
-                        <p>High School</p>
-                    </div>
-                </div>
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">About Crystal Vision Tutoring</h2>
+            <p class="section-subtitle">Students teaching students — with experience, empathy, and excellence</p>
+          </div>
+            <div class="about-text">
+              <p>At Crystal Vision Tutoring, we're a team of high honor roll high school students dedicated to helping younger learners succeed. We understand what it takes to excel — from managing schoolwork to mastering tough subjects — and we use that experience to make learning easier and more enjoyable for our students.</p>
             </div>
-            <button class="slider-btn next">❯</button>
-        </div>
-    </section>
-    <section id="contact" class="contact-section">
-        <h2>Start Now</h2>
-        <p class="contact-subtext">
-            If you have any questions or want to get started, contact me for a free consultation!
-        </p>
-        <p class="contact-note">
-            Appointments must be scheduled at least one day in advance. Same-day bookings may incur an additional fee. Contact us early to secure your spot!
-        </p>
-        <div class="contact-buttons">
-            <a class="cta-button liquid" href="sms:+12247631518?&body=Hi!%20I'm%20interested%20in%20tutoring.">📞 Phone (TEXT)</a> 
-            <a class="cta-button liquid" href="mailto:visionarytutors2025@gmail.com">📧 Email</a>
-        </div>
-    </section>
+          </div>
+      </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p class="ti">We’re just a group of high school students who understand the struggles of school and want to help others succeed. Our goal is simple: to give back to the community by offering tutoring to kids who want to improve. We’ve been through the challenges of tough classes, so we’re here to offer affordable, relatable help from people who are passionate about seeing you succeed. Together, we’ll tackle your academic goals and help you gain confidence in your learning.</p>
-        <img src="VisionaryLogo.png" alt="Crystal Vision Tutoring Logo" style="width:200px;height:250px;display: block;margin-left: auto;margin-right: auto;">
-    </section>
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Personalized tutoring tailored to your child's needs</p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">📚</div>
+              <h3>Reading Skills</h3>
+              <p>Build comprehension, fluency, and a love for reading through engaging materials and proven strategies.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">✍️</div>
+              <h3>Writing Excellence</h3>
+              <p>Develop strong writing fundamentals, from grammar and structure to creative expression and essay composition.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🔢</div>
+              <h3>Math Mastery</h3>
+              <p>Master concepts from basic arithmetic to advanced problem-solving with clear explanations and practice.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🎯</div>
+              <h3>Study Skills</h3>
+              <p>Learn effective study habits, time management, and test-taking strategies that lead to lasting success.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">💡</div>
+              <h3>Homework Help</h3>
+              <p>Get assistance with daily assignments and projects while developing independent learning skills.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🌟</div>
+              <h3>Confidence Building</h3>
+              <p>Foster a positive mindset and self-assurance that empowers students to tackle any challenge.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <footer>
-        <p> Crystal Vision Tutoring </p>
+      <section id="why-us" class="why-us">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Why Choose Crystal Vision Tutoring?</h2>
+            <p class="section-subtitle">What makes us different</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature">
+              <div class="feature-icon">👥</div>
+              <h3>Student-to-Student Connection</h3>
+              <p>Our tutors are current high honor roll students who relate to the challenges young learners face. This connection creates a comfortable, encouraging environment.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🏆</div>
+              <h3>Proven Academic Excellence</h3>
+              <p>Each tutor has demonstrated academic success and knows firsthand what it takes to achieve high grades and master challenging material.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🎨</div>
+              <h3>Engaging & Enjoyable</h3>
+              <p>We make learning fun! Our sessions are designed to be interactive and engaging, keeping students motivated and excited about their progress.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">👤</div>
+              <h3>Personalized Approach</h3>
+              <p>Every student learns differently. We customize our teaching methods to match each child's unique learning style and pace.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">📈</div>
+              <h3>Lasting Results</h3>
+              <p>We don't just help with today's homework — we build skills and habits that lead to long-term academic success and confidence.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">💼</div>
+              <h3>Flexible & Convenient</h3>
+              <p>We work around your schedule to provide convenient tutoring sessions that fit your family's needs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonial">
+        <div class="container">
+          <div class="testimonial-content">
+            <div class="quote-icon">"</div>
+            <blockquote>
+              <p>Crystal Vision Tutoring has been a game-changer for our family. The tutors understand what students are going through because they're students themselves. My child actually looks forward to tutoring sessions now!</p>
+            </blockquote>
+            <cite>— Parent from Schaumburg</cite>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <h2>Ready to Get Started?</h2>
+              <p>Help your child discover their path to academic success. Contact us today to schedule a personalized tutoring session.</p>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <span class="contact-icon">📍</span>
+                  <div>
+                    <strong>Location</strong>
+                    <p>Schaumburg, IL & Surrounding Areas</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">⏰</span>
+                  <div>
+                    <strong>Availability</strong>
+                    <p>Flexible scheduling to fit your needs</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true"
+                class="contact-form" 
+                id="contactForm"
+                >
+                <input type="hidden" name="form-name" value="contact">
+
+                <div class="form-group">
+                    <label for="parentName">Parent/Guardian Name *</label>
+                    <input type="text" id="parentName" name="parentName" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="studentName">Student Name *</label>
+                    <input type="text" id="studentName" name="studentName" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="grade">Student Grade Level *</label>
+                    <select id="grade" name="grade" required>
+                    <option value="">Select grade level</option>
+                    <option value="K">Kindergarten</option>
+                    <option value="1">1st Grade</option>
+                    <option value="2">2nd Grade</option>
+                    <option value="3">3rd Grade</option>
+                    <option value="4">4th Grade</option>
+                    <option value="5">5th Grade</option>
+                    <option value="6">6th Grade</option>
+                    <option value="7">7th Grade</option>
+                    <option value="8">8th Grade</option>
+                    <option value="9">9th Grade</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subjects">Subjects of Interest *</label>
+                    <select id="subjects" name="subjects" required multiple>
+                    <option value="reading">Reading</option>
+                    <option value="writing">Writing</option>
+                    <option value="math">Math</option>
+                    <option value="study-skills">Study Skills</option>
+                    <option value="homework">Homework Help</option>
+                    </select>
+                    <small>Hold Ctrl (or Cmd) to select multiple subjects</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your child's learning goals or any specific areas where they need help..."></textarea>
+                </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="/VisionaryLogo.png" alt="Crystal Vision Tutoring" class="footer-logo" />
+            <p>Helping students see their path to success — clearly and confidently.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/tutors.html">Tutors</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Serving Schaumburg</h4>
+            <p>Personalized tutoring for students in Schaumburg and surrounding areas</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Crystal Vision Tutoring. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
-</body>
-<script>
-    const slider = document.querySelector('.slider-wrapper');
-    const nextBtn = document.querySelector('.slider-btn.next');
-    const prevBtn = document.querySelector('.slider-btn.prev');
 
-    nextBtn.addEventListener('click', () => {
-        slider.scrollBy({ left: 320, behavior: 'smooth' });
-    });
-
-    prevBtn.addEventListener('click', () => {
-        slider.scrollBy({ left: -320, behavior: 'smooth' });
-    });
-</script>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>

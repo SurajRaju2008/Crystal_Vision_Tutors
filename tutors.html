@@ -1,90 +1,446 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crystal Vision Tutoring</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <head><link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <img src="VisionaryLogo.png" alt="Crystal Vision Tutoring Logo" style="width:100px;height:120px;">
-        <h3>Top notch tutoring service</h3>
-        <h1>Crystal Vision Tutoring</h1>
-        <p>High-achieving high school tutors, passionate about teaching—helping peers reach their academic goals!</p>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/VisionaryLogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Meet our team of high honor roll tutors at Crystal Vision Tutoring in Schaumburg. Passionate high school students dedicated to helping you succeed." />
+    <title>Our Tutors | Crystal Vision Tutoring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+      .tutors-hero {
+        margin-top: 86px;
+        padding: calc(var(--spacing-unit) * 10) calc(var(--spacing-unit) * 3);
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        text-align: center;
+      }
+
+      .tutors-hero h1 {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: calc(var(--spacing-unit) * 2);
+      }
+
+      .tutors-hero p {
+        font-size: 1.25rem;
+        color: var(--text-medium);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .stats-banner {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 3);
+        text-align: center;
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      .founder-section {
+        padding: calc(var(--spacing-unit) * 12) 0;
+        background-color: var(--bg-white);
+      }
+
+      .founder-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 calc(var(--spacing-unit) * 3);
+      }
+
+      .founder-card {
+        background-color: white;
+        padding: calc(var(--spacing-unit) * 6);
+        border-radius: 16px;
+        box-shadow: var(--shadow-lg);
+        text-align: center;
+      }
+
+      .founder-card h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: calc(var(--spacing-unit) * 2);
+      }
+
+      .founder-card .intro-text {
+        font-size: 1.125rem;
+        color: var(--text-medium);
+        margin-bottom: calc(var(--spacing-unit) * 4);
+        line-height: 1.7;
+      }
+
+      .founder-image {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin: 0 auto calc(var(--spacing-unit) * 3);
+        border: 4px solid var(--secondary-color);
+        box-shadow: var(--shadow-md);
+        object-fit: cover;
+      }
+
+      .founder-card h3 {
+        font-size: 1.75rem;
+        color: var(--primary-color);
+        margin-bottom: calc(var(--spacing-unit) * 3);
+      }
+
+      .founder-bio {
+        font-size: 1.0625rem;
+        color: var(--text-medium);
+        line-height: 1.8;
+        margin-bottom: calc(var(--spacing-unit) * 3);
+        text-align: left;
+      }
+
+      .founder-subjects {
+        background-color: var(--bg-light);
+        padding: calc(var(--spacing-unit) * 3);
+        border-radius: 8px;
+        font-size: 1rem;
+        color: var(--primary-color);
+        font-weight: 600;
+        margin-bottom: calc(var(--spacing-unit) * 3);
+      }
+
+      .founder-contact {
+        display: inline-flex;
+        align-items: center;
+        gap: calc(var(--spacing-unit) * 1.5);
+        background-color: var(--secondary-color);
+        color: white;
+        padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .founder-contact:hover {
+        background-color: var(--primary-color);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .tutors-section {
+        padding: calc(var(--spacing-unit) * 12) 0;
+        background-color: var(--bg-light);
+      }
+
+      .tutors-section-header {
+        text-align: center;
+        margin-bottom: calc(var(--spacing-unit) * 8);
+      }
+
+      .tutors-section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: calc(var(--spacing-unit) * 2);
+      }
+
+      .tutors-section-header p {
+        font-size: 1.25rem;
+        color: var(--text-medium);
+      }
+
+      .tutors-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: calc(var(--spacing-unit) * 4);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 calc(var(--spacing-unit) * 3);
+      }
+
+      .tutor-card {
+        background-color: white;
+        padding: calc(var(--spacing-unit) * 4);
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .tutor-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .tutor-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 auto calc(var(--spacing-unit) * 3);
+        border: 3px solid var(--secondary-color);
+        box-shadow: var(--shadow-md);
+        object-fit: cover;
+      }
+
+      .tutor-card h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: calc(var(--spacing-unit) * 2);
+      }
+
+      .tutor-bio {
+        font-size: 1rem;
+        color: var(--text-medium);
+        line-height: 1.7;
+        margin-bottom: calc(var(--spacing-unit) * 3);
+        text-align: left;
+      }
+
+      .tutor-subjects {
+        background-color: var(--bg-light);
+        padding: calc(var(--spacing-unit) * 2);
+        border-radius: 8px;
+        font-size: 0.9375rem;
+        color: var(--primary-color);
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 768px) {
+        .tutors-hero h1 {
+          font-size: 2.25rem;
+        }
+
+        .tutors-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-container">
+          <div class="logo-container">
+            <img src="/VisionaryLogo.png" alt="Crystal Vision Tutoring Logo" class="logo" />
+            <span class="brand-name">Crystal Vision Tutoring</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html" class="nav-link">Home</a></li>
+            <li><a href="/tutors.html" class="nav-link">Tutors</a></li>
+            <li><a href="/index.html#services" class="nav-link">Services</a></li>
+            <li><a href="/index.html#contact" class="nav-link nav-link-cta">Get Started</a></li>
+          </ul>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="tutors.html">Tutors</a>
-    </nav>
+    <main>
+      <section class="tutors-hero">
+        <h1>Meet Our Expert Tutors</h1>
+        <p>High-achieving high school tutors, passionate about teaching and helping peers reach their academic goals!</p>
+      </section>
 
-    <div class="notification-banner">
-        <p>🎉 95% of our students see grade improvement of 15% or more within a month! 🎉</p>
-    </div>
-    
-    <section id="founder">
-        <div class="tutor-card">
+      <div class="stats-banner">
+        95% of our students see grade improvement of 15% or more within a month!
+      </div>
+
+      <section class="founder-section">
+        <div class="founder-container">
+          <div class="founder-card">
             <h2>Meet the Founder</h2>
-            <p>The founder of Crystal Vision Tutoring is passionate about empowering students to reach their academic goals!</p>
-            <div>
-                <img src="Tutors Imgs/suraj.png" alt="Founder: Suraj Raju" style="width: 150px; height: 150px; border-radius: 50%; display: block; margin: 0 auto;">
-            </div>
+            <p class="intro-text">The founder of Crystal Vision Tutoring is passionate about empowering students to reach their academic goals!</p>
+
+            <img src="/tutors-imgs/suraj.png" alt="Founder: Suraj Raju" class="founder-image" />
+
             <h3>Suraj Raju</h3>
-            <p>I'm a sophomore at William Fremd High School, actively involved in basketball, Model UN, Business Professionals of America, and volunteering at Shri Shirdi Sai Mandir. These experiences have taught me leadership, teamwork, and dedication. I started Crystal Vision Tutoring group and built this website because I saw how many students in my community were struggling in this competitive schooling enviornment, and I wanted to make a difference and help my community achieve their academic goals. Feel free to reach out at (224) 763-1518!</p>
-            <h3>Subjects: Math(1st-AP Calc A), Science, AP Computer Science</h3>
-        </div>
-    </section>
 
-    <section id="tutors">
-        <h2>Meet the Tutors</h2>
-        <p>Our tutors are accomplished, passionate, and ready to help you succeed!</p>
-        <div class="tutors"> 
-            <div class="tutor-card">
-                <img src="Tutors Imgs/vikram.png" alt="Tutor 1">
-                <h3>Vikram Pai</h3>
-                <p>I am currently a sophomore at William Fremd High School with a burning passion for learning and helping others.  In the Fremd community, I am actively involved in Business Professionals of America, Public Forum Debate, Boys Tennis, as well as Model United Nations. I want nothing but success for my students, and as a tutor, I’ll strive to help you reach your education goals.</p>
-                <h3>Subjects: Math(1st-Calc A), French, Science, Accounting, AP Euro/Human Geo</h3>
-            </div>
-            <div class="tutor-card">
-                <img src="Tutors Imgs/shauryam.png" alt="Tutor 2">
-                <h3>Shaurya Middela</h3>
-                <p>I’m a sophomore at Fremd High School with a strong passion for business and finance. I’m actively involved in Business Professionals of America, Debate, and Tennis. In my free time, I enjoy watching football, spending time with family and friends, and playing tennis. I’m eager to help you reach your academic goals and make the learning process as effective and enjoyable as possible. </p>
-                <h3>Subjects: Math(1st-AP Calc A), English, Science, AP Computer Science</h3>
-            </div>
-            <div class="tutor-card">
-                <img src="Tutors Imgs/shauryar.png" alt="Tutor 3">
-                <h3>Shaurya Rai</h3>
-                <p>I am a dedicated student at William fremd high school with a passion for programming and I want to be a cybersecurity analyst. I am an active member of my schools soccer team and also the Debate club at my high school. I have a well rounded background and I am excited to help students achieve their academic goals.</p>
-                <h3>Subjects: Math(1st-Pre Calc), German, Accounting, AP Euro/US History/Computer Science/Physics</h3>
-            </div>
-            <div class="tutor-card">
-                <img src="Tutors Imgs/josh.png" alt="Tutor 4">
-                <h3>Joshua Verghese</h3>
-                <p>I am a sophomore at William Fremd High School. I am currently a member of Business Professionals of America, where I have honed my skills in leadership and collaboration. With a strong passion for teaching, I have gained valuable experience as a tutor, helping students excel academically. I am committed to guiding and motivating others to achieve their full potential.</p>
-                <h3>Subjects: Math(1st-Pre Calc), English, AP Computer Science</h3>
-            </div>
-        </div>
-    </section>
+            <p class="founder-bio">
+              I'm a sophomore at William Fremd High School, actively involved in basketball, Model UN, Business Professionals of America, and volunteering at Shri Shirdi Sai Mandir. These experiences have taught me leadership, teamwork, and dedication. I started Crystal Vision Tutoring group and built this website because I saw how many students in my community were struggling in this competitive schooling environment, and I wanted to make a difference and help my community achieve their academic goals.
+            </p>
 
-    <section id="contact" class="contact-section">
-        <h2>Start Now</h2>
-        <p class="contact-subtext">
-            If you have any questions or want to get started, contact me for a free consultation!
-        </p>
-        <p class="contact-note">
-            Appointments must be scheduled at least one day in advance. Same-day bookings may incur an additional fee. Contact us early to secure your spot!
-        </p>
-        <div class="contact-buttons">
-            <a class="cta-button liquid" href="sms:+12247631518?&body=Hi!%20I'm%20interested%20in%20tutoring.">📞 Phone (TEXT)</a> 
-            <a class="cta-button liquid" href="mailto:visionarytutors2025@gmail.com">📧 Email</a>
-        </div>
-        <img src="VisionaryLogo.png" alt="Crystal Vision Tutoring Logo" style="width:200px;height:250px;display: block;margin-left: auto;margin-right: auto;">
-    </section>
+            <div class="founder-subjects">
+              Subjects: Math (1st-AP Calc A), English <br>
+              SAT: 1500 (700 RW, 800 M)
+            </div>
 
-    <footer>
-        <p> Crystal Vision Tutoring </p>
+            <a href="sms:+12247631518?&body=Hi!%20I'm%20interested%20in%20tutoring." class="founder-contact">
+              <span>📞</span>
+              <span>Contact: (224) 763-1518</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="tutors-section">
+        <div class="tutors-section-header">
+          <h2>Our Accomplished Tutors</h2>
+          <p>Meet our passionate team ready to help you succeed!</p>
+        </div>
+
+        <div class="tutors-grid">
+          <div class="tutor-card">
+            <img src="/tutors-imgs/vikram.png" alt="Vikram Pai" class="tutor-image" />
+            <h3>Vikram Pai</h3>
+            <p class="tutor-bio">
+              I am currently a sophomore at William Fremd High School with a burning passion for learning and helping others. In the Fremd community, I am actively involved in Business Professionals of America, Public Forum Debate, Boys Tennis, as well as Model United Nations. I want nothing but success for my students, and as a tutor, I'll strive to help you reach your education goals.
+            </p>
+            <div class="tutor-subjects">
+              Subjects: Math (1st-Calc A), English <br>
+              ACT: 35 (33 M, 36 R, 35 E)
+            </div>
+          </div>
+
+          <div class="tutor-card">
+            <img src="/tutors-imgs/shauryam.png" alt="Shaurya Middela" class="tutor-image" />
+            <h3>Shaurya Middela</h3>
+            <p class="tutor-bio">
+              I'm a sophomore at Fremd High School with a strong passion for business and finance. I'm actively involved in Business Professionals of America, Debate, and Tennis. In my free time, I enjoy watching football, spending time with family and friends, and playing tennis. I'm eager to help you reach your academic goals and make the learning process as effective and enjoyable as possible.
+            </p>
+            <div class="tutor-subjects">
+              Subjects: Math (1st-AP Calc A), English
+            </div>
+          </div>
+
+          <div class="tutor-card">
+            <img src="/tutors-imgs/shauryar.png" alt="Shaurya Rai" class="tutor-image" />
+            <h3>Shaurya Rai</h3>
+            <p class="tutor-bio">
+              I am a dedicated student at William Fremd High School with a passion for programming and I want to be a cybersecurity analyst. I am an active member of my school's soccer team and also the Debate club at my high school. I have a well rounded background and I am excited to help students achieve their academic goals.
+            </p>
+            <div class="tutor-subjects">
+              Subjects: Math (1st-Pre Calc)
+            </div>
+          </div>
+
+          <div class="tutor-card">
+            <img src="/tutors-imgs/josh.png" alt="Joshua Verghese" class="tutor-image" />
+            <h3>Joshua Verghese</h3>
+            <p class="tutor-bio">
+              I am a sophomore at William Fremd High School. I am currently a member of Business Professionals of America, where I have honed my skills in leadership and collaboration. With a strong passion for teaching, I have gained valuable experience as a tutor, helping students excel academically. I am committed to guiding and motivating others to achieve their full potential.
+            </p>
+            <div class="tutor-subjects">
+              Subjects: Math (1st-Pre Calc), English
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <h2>Ready to Get Started?</h2>
+              <p>Help your child discover their path to academic success. Contact us today to schedule a personalized tutoring session.</p>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <span class="contact-icon">📍</span>
+                  <div>
+                    <strong>Location</strong>
+                    <p>Schaumburg, IL & Surrounding Areas</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">⏰</span>
+                  <div>
+                    <strong>Availability</strong>
+                    <p>Flexible scheduling to fit your needs</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">⚠️</span>
+                  <div>
+                    <strong>Booking Policy</strong>
+                    <p>Appointments must be scheduled at least one day in advance. Same-day bookings may incur an additional fee.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="parentName">Parent/Guardian Name *</label>
+                <input type="text" id="parentName" name="parentName" required />
+              </div>
+              <div class="form-group">
+                <label for="studentName">Student Name *</label>
+                <input type="text" id="studentName" name="studentName" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="form-group">
+                <label for="grade">Student Grade Level *</label>
+                <select id="grade" name="grade" required>
+                  <option value="">Select grade level</option>
+                  <option value="K">Kindergarten</option>
+                  <option value="1">1st Grade</option>
+                  <option value="2">2nd Grade</option>
+                  <option value="3">3rd Grade</option>
+                  <option value="4">4th Grade</option>
+                  <option value="5">5th Grade</option>
+                  <option value="6">6th Grade</option>
+                  <option value="7">7th Grade</option>
+                  <option value="8">8th Grade</option>
+                  <option value="9">9th Grade</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="subjects">Subjects of Interest *</label>
+                <select id="subjects" name="subjects" required multiple>
+                  <option value="reading">Reading</option>
+                  <option value="writing">Writing</option>
+                  <option value="math">Math</option>
+                  <option value="study-skills">Study Skills</option>
+                  <option value="homework">Homework Help</option>
+                </select>
+                <small>Hold Ctrl (or Cmd) to select multiple subjects</small>
+              </div>
+              <div class="form-group">
+                <label for="message">Additional Information</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your child's learning goals or any specific areas where they need help..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Send Inquiry</button>
+              <p class="form-success" id="formSuccess">Thank you! We'll be in touch soon.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="/VisionaryLogo.png" alt="Crystal Vision Tutoring" class="footer-logo" />
+            <p>Helping students see their path to success — clearly and confidently.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/tutors.html">Tutors</a></li>
+              <li><a href="/index.html#services">Services</a></li>
+              <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Serving Schaumburg</h4>
+            <p>Personalized tutoring for students in Schaumburg and surrounding areas</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Crystal Vision Tutoring. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
-</body>
+
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
